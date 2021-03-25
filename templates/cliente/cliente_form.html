@@ -1,0 +1,49 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row" style="padding: 100px;">
+    <h1 style="color: black;">Aqui podra ingresar al nuevo cliente</h1>
+
+    <form method='post'>
+        {% csrf_token %}
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.nombre.name }}">{{ form.nombre.label }}</label>
+                {{ form.nombre }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.direccion.name }}">{{ form.direccion.label }}</label>
+                {{ form.direccion }}
+            </div>
+        </div>
+        <div class="row" style="padding: 2px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.documento.name }}">{{ form.documento.label }}</label>
+                {{ form.documento }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.telefono.name }}">{{ form.telefono.label }}</label>
+                {{ form.telefono }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form2.nacionalidad.name }}">{{ form2.nacionalidad.label }}</label>
+                {{ form2.nacionalidad }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form2.pais.name }}">{{ form2.pais.label }}</label>
+                {{ form2.pais }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">Guardar</button>
+    </form>
+</div>
+{% endblock %}
