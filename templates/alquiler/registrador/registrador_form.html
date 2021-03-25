@@ -1,0 +1,42 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row" style="padding: 100px;">
+    <h1 style="color: black;">Aqui podra ingresar un nuevo registrador</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.nombre.name }}">{{ form.nombre.label }}</label>
+                {{ form.nombre }}
+            </div>
+        </div>
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.direccion.name }}">{{ form.direccion.label }}</label>
+                {{ form.direccion }}
+            </div>
+        </div>
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.documento.name }}">{{ form.documento.label }}</label>
+                {{ form.documento }}
+            </div>
+        </div>
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.estado.name }}">{{ form.estado.label }}</label>
+                {{ form.estado }}
+            </div>
+        </div>
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.observacion.name }}">{{ form.observacion.label }}</label>
+                {{ form.observacion }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">Guardar</button>
+    </form>
+</div> 
+{% endblock %}

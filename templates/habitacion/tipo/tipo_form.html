@@ -1,0 +1,24 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row" style="padding: 100px;">
+    <h1 style="color: black;">Aqui podra ingresar un nuevo Tipo de Habitación</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.nombre.name }}">{{ form.nombre.label }}</label>
+                {{ form.nombre }}
+            </div>
+        </div>
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.descripcion.name }}">{{ form.descripcion.label }}</label>
+                {{ form.descripcion }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">Guardar</button>
+    </form>
+</div> 
+{% endblock %}

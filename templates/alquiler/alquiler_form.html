@@ -1,0 +1,61 @@
+{% extends 'base/base.html' %}
+
+{% block content %}
+
+<div class="row" style="padding: 100px;">
+    <h1 style="color: black;">Aqui podra ingresar el nuevo alquiler</h1>
+
+    <form method='post'>
+        {% csrf_token %}
+        <div class="row" style="padding-right: 500px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.fechaHoraEntrada.name }}">{{ form.fechaHoraEntrada.label }}</label>
+                {{ form.fechaHoraEntrada }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.fechaHoraSalidaname }}">{{ form.fechaHoraSalida.label }}</label>
+                {{ form.fechaHoraSalida }}
+            </div>
+        </div>
+        <div class="row" style="padding: 2px;">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.costoTotal.name }}">{{ form.costoTotal.label }}</label>
+                {{ form.costoTotal }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.obsevacion.name }}">{{ form.obsevacion.label }}</label>
+                {{ form.obsevacion }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.habitacion.name }}">{{ form.habitacion.label }}</label>
+                {{ form.habitacion }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.cliente.name }}">{{ form.cliente.label }}</label>
+                {{ form.cliente }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.registrador.name }}">{{ form.registrador.label }}</label>
+                {{ form.registrador }}
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <label style="color: black; padding: 15px;" for="{{ form.estado.name }}">{{ form.estado.label }}</label>
+                {{ form.estado }}
+            </div>
+        </div>
+        <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">Guardar</button>
+    </form>
+</div>
+{% endblock %}
