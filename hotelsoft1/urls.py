@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.conf.urls import url, include
+from django.contrib.auth.views import LoginView
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
@@ -22,4 +23,6 @@ urlpatterns = [
     url(r'^cliente/', include('apps.cliente.urls')),
     url(r'^alquiler/', include('apps.alquiler.urls')),
     url(r'^habitacion/', include('apps.habitacion.urls')),
+    url(r'^usuario/', include('apps.usuarios.urls')),
+    url(r'^$', LoginView.as_view(template_name = 'usuario/login.html'), name="login")
 ]
