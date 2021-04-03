@@ -139,4 +139,6 @@ EMAIL_HOST_USER = 'proyectodjango6@gmail.com'
 EMAIL_HOST_PASSWORD = 'conquista123'
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static/images')
+
 

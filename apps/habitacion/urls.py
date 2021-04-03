@@ -1,5 +1,5 @@
 from django.conf.urls import url, include
-from apps.habitacion.views import index, TipoHabitacionList, TipoHabitacionInsert, TipoHabitacionUpdate, TipoHabitacionDelete, HabitacionList, HabitacionCreate, HabitacionUpdate, HabitacionDelete
+from apps.habitacion.views import index, TipoHabitacionList, TipoHabitacionInsert, TipoHabitacionUpdate, TipoHabitacionDelete, HabitacionList, HabitacionCreate, HabitacionUpdate, HabitacionDelete, ReporteHabitacionPdf, ReporteHabitacionExcel
 
 urlpatterns = [
     url(r'^$', index, name='index'),
@@ -11,5 +11,7 @@ urlpatterns = [
     url(r'^nuevo$', HabitacionCreate.as_view(), name="habitacion_insertar"),
     url(r'^editar/(?P<pk>\d+)$', HabitacionUpdate.as_view(), name="habitacion_editar"),
     url(r'^eliminar/(?P<pk>\d+)$', HabitacionDelete.as_view(), name="habitacion_eliminar"),
+    url(r'^reporte_habitacion_pdf/$', ReporteHabitacionPdf.as_view(), name="reporte_habitacion_pdf"),
+    url(r'^reporte_habitacion_excel/$', ReporteHabitacionExcel.as_view(), name="reporte_habitacion_excel"),
 ]
     

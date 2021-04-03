@@ -1,6 +1,11 @@
 {% extends 'base/base.html' %}
 
 {% block content %}
+<div style="text-align: right; margin-top: 100px; margin-right: 50px; margin-top: 105px;">
+    <h4 style="font-family: Lucida Sans; color: #5B7C89;">Reportes</h4>
+    <a href="{% url 'reporte_habitacion_pdf' %}" class="fa fa-file-pdf-o" style="font-size:30px;color:red; margin: 10px;"></a>
+    <a href="{% url 'reporte_habitacion_excel' %}" class="fa fa-file-excel-o" style="font-size:30px;color: #287233; margin: 7px;" ></a>
+</div>
 <div class="row" style="padding: 100px;">
     <table class="table table-dark">
         <thead>
