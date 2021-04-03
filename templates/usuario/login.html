@@ -12,11 +12,10 @@
             <div class="wrapper-page">
                 <div class="text-center">
                     <a href="cliente_listar" class="logo"><span>Hotel<span>Soft</span></span></a>
-                    <h5 class="text-muted mt-0 font-600">Conectese</h5>
                 </div>
                 <div class="m-t-40 card-box">
                     <div class="text-center">
-                        <h4 class="text-uppercase font-bold mb-0">Sign In</h4>
+                        <h4 class="text-uppercase font-bold mb-0">Inicie Sesion</h4>
                     </div>
                     <div class="p-20">
                         <form class="form-horizontal m-t-20" action="index.html">
@@ -53,7 +52,7 @@
 
                             <div class="form-group m-t-30 mb-0">
                                 <div class="col-sm-12">
-                                    <a href="page-recoverpw.html" class="text-muted"><i class="fa fa-lock m-r-5"></i> Olvido su contraseña?</a>
+                                    <a href="{% url 'password_reset' %}" class="text-muted"><i class="fa fa-lock m-r-5"></i> Olvido su contraseña?</a>
                                 </div>
                             </div>
                         </form>
