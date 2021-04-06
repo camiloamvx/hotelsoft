@@ -10,6 +10,7 @@ class RegistradorForm(forms.ModelForm):
             'nombre',
             'direccion',
             'documento',
+            'telefono',
             'estado',
             'observacion',
         ]
@@ -18,6 +19,7 @@ class RegistradorForm(forms.ModelForm):
             'nombre':'Nombre',
             'direccion':'Dirección',
             'documento':'Documento',
+            'telefono':'Telefono',
             'estado':'Estado',
             'observacion':'Observación',
         }
@@ -26,6 +28,7 @@ class RegistradorForm(forms.ModelForm):
             'nombre':forms.TextInput(attrs={'class':'form-control'}),
             'direccion':forms.TextInput(attrs={'class':'form-control'}),
             'documento':forms.TextInput(attrs={'class':'form-control'}),
+            'telefono':forms.TextInput(attrs={'class':'form-control'}),
             'estado':forms.TextInput(attrs={'class':'form-control'}),
             'observacion':forms.Textarea(attrs={'class':'form-control'}),
         }

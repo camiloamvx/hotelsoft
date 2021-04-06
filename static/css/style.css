@@ -4449,6 +4449,12 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
   background-size: cover;
 }
 
+.site-background {
+  background-image: url("../images/background.jpg") center;
+  position: absolute;
+  background-size: cover;
+}
+
 .wrapper-page {
   margin: 5% auto;
   position: relative;

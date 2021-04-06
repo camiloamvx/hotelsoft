@@ -1,7 +1,7 @@
 {% load static%} 
 <html>
     <head>
-        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
         <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}">
         <link href="{% static 'css/icons.css' %}" rel="stylesheet" type="text/css" />
         <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css" />
@@ -12,15 +12,13 @@
         </title>
 |
     </head>
-
     <body>
-
-    <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/jquery.min.js' %}"></script>
-    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="{% static '/js/modernizr.min.js' %}"></script>
     <script src="{% static '/js/waves.js' %}"></script>
-    <script src="{% static '/js/jquery.slimscroll.js' %}"></script>
+    
 
     <!-- App js -->
     <script src="{% static '/js/jquery.core.js' %}"></script>
@@ -136,23 +134,23 @@
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="ti-user m-r-5"></i><span> Clientes </span> </a>
+                        <a href="{% url 'cliente_listar' %}"><i class="ti-user m-r-5"></i><span> Clientes </span> </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="mdi mdi-view-list"></i> <span> Alquileres </span> </a>
+                        <a href="{% url 'alquiler_listar' %}"><i class="mdi mdi-view-list"></i> <span> Alquileres </span> </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="mdi mdi-chart-donut-variant"></i><span> Habitaciones </span> </a>
+                        <a href="{% url 'habitacion_listar' %}"><i class="mdi mdi-chart-donut-variant"></i><span> Habitaciones </span> </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="mdi mdi-google-pages"></i><span> Pages </span> </a>
+                        <a href="{% url 'registrador_listar' %}"><i class="ti-user m-r-5"></i><span> Registrador </span> </a>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="#"><i class="mdi mdi-layers"></i><span>Extra Pages </span> </a>
+                        <a href="#"><i class="mdi mdi-google-pages"></i><span>Galeria </span> </a>
                         
                     </li>
                 </ul>
@@ -162,7 +160,27 @@
     </div> <!-- end navbar-custom -->
 </header>
 <!-- End Navigation Bar-->
-
+<div class="wrapper">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="btn-group pull-right m-t-20">
+                    <button type="button" class="btn btn-custom dropdown-toggle waves-effect waves-light" data-toggle="dropdown" aria-expanded="false">Settings </button>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">Something else</a>
+                        <!-- item-->
+                        <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
         {%endblock%}
         {% block content %}
         {% endblock %}

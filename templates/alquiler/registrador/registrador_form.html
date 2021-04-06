@@ -2,41 +2,53 @@
 
 {% block content %}
 
-<div class="row" style="padding: 100px;">
-    <h1 style="color: black;">Aqui podra ingresar un nuevo registrador</h1>
-    <form method="post">
-        {% csrf_token %}
-        <div class="row" style="padding-right: 500px;">
-            <div class="form-group">
-                <label style="color: black; padding: 15px;" for="{{ form.nombre.name }}">{{ form.nombre.label }}</label>
+<div class="row">
+    <div class="col-12">
+        <div class="p-20">
+          <form class="form-horizontal" role="form">
+          {% csrf_token %}
+          <div class="form-group row" style="padding-right: 400px;">
+            <label class="col-2 col-form-label" for="{{ form.nombre.name }}">{{ form.nombre.label }}</label>
+              <div class="col-10; col-md-5 col-md-offset-2">
                 {{ form.nombre }}
-            </div>
-        </div>
-        <div class="row" style="padding-right: 500px;">
-            <div class="form-group">
-                <label style="color: black; padding: 15px;" for="{{ form.direccion.name }}">{{ form.direccion.label }}</label>
+              </div>
+          </div>
+          <div class="form-group row" style="padding-right: 400px;">
+            <label class="col-2 col-form-label" for="{{ form.direccion.name }}">{{ form.direccion.label }}</label>
+              <div class="col-10; col-md-5 col-md-offset-2">
                 {{ form.direccion }}
-            </div>
-        </div>
-        <div class="row" style="padding-right: 500px;">
-            <div class="form-group">
-                <label style="color: black; padding: 15px;" for="{{ form.documento.name }}">{{ form.documento.label }}</label>
+              </div>
+          </div>
+          <div class="form-group row" style="padding-right: 400px;">
+            <label class="col-2 col-form-label" for="{{ form.documento.name }}">{{ form.documento.label }}</label>
+              <div class="col-10; col-md-4 col-md-offset-2">
                 {{ form.documento }}
+              </div>
             </div>
-        </div>
-        <div class="row" style="padding-right: 500px;">
-            <div class="form-group">
-                <label style="color: black; padding: 15px;" for="{{ form.estado.name }}">{{ form.estado.label }}</label>
-                {{ form.estado }}
+            <div class="form-group row" style="padding-right: 400px;">
+              <label class="col-2 col-form-label" for="{{ form.telefono.name }}">{{ form.telefono.label }}</label>
+                <div class="col-10; col-md-4 col-md-offset-2">
+                  {{ form.telefono }}
+                </div>
             </div>
-        </div>
-        <div class="row" style="padding-right: 500px;">
-            <div class="form-group">
-                <label style="color: black; padding: 15px;" for="{{ form.observacion.name }}">{{ form.observacion.label }}</label>
-                {{ form.observacion }}
-            </div>
-        </div>
-        <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5">Guardar</button>
-    </form>
-</div> 
+                <div class="form-group row" style="padding-right: 400px;">
+                    <label class="col-2 col-form-label" for="{{ form.estado.name }}">{{ form.estado.label }}</label>
+                      <div class="col-10; col-md-4 col-md-offset-2">
+                        {{ form.estado }}
+                </div>
+                </div>
+                <div class="form-group row" style="padding-right: 400px;">
+                    <label class="col-2 col-form-label" for="{{ form.observacion.name }}">{{ form.observacion.label }}</label>
+                      <div class="col-10; col-md-6 col-md-offset-2">
+                        {{ form.observacion }}
+                </div>
+                </div>
+              
+              <button type="submit" class="btn btn-success btn-rounded w-md waves-effect waves-light m-b-5" style="margin: 20;">Guardar</button>
+            
+          </form>
+    </div>
+  </div>
+
+</div>
 {% endblock %}
