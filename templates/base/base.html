@@ -37,9 +37,9 @@
                     <span class="logo-large"><i class="mdi mdi-radar"></i> Adminto</span> -->
                 </a>
                 <!-- Image Logo -->
-                <a href="index.html" class="logo">
+                <a href="{% url 'index' %}" class="logo">
                     <img src="{% static '/images/logo-sm.png' %}" alt="" height="24" class="logo-large">
-                    <img src="{% static 'images/logo.png' %}" alt="" height="24" style="margin: 20px;" class="logo-large">
+                    <img src="{% static 'images/hotelsoft.png' %}" alt="" height="24" style="margin: 20px;" class="logo-large">
                 </a>
 
             </div>
@@ -130,7 +130,7 @@
                 <!-- Navigation Menu-->
                 <ul class="navigation-menu">
                     <li class="has-submenu">
-                        <a href="index.html"><i class="mdi mdi-home"></i> <span> Inicio </span> </a>
+                        <a href="{% url 'index' %}"><i class="mdi mdi-home"></i> <span> Inicio </span> </a>
                     </li>
 
                     <li class="has-submenu">
@@ -139,14 +139,20 @@
 
                     <li class="has-submenu">
                         <a href="{% url 'alquiler_listar' %}"><i class="mdi mdi-view-list"></i> <span> Alquileres </span> </a>
+                        <ul class="submenu">
+                            <li><a href="{% url 'registrador_listar' %}">Registrador</a></li>
+                            <li><a href="{% url 'estado_listar' %}">Estado</a></li>
+                            
+                        </ul>
                     </li>
 
                     <li class="has-submenu">
-                        <a href="{% url 'habitacion_listar' %}"><i class="mdi mdi-chart-donut-variant"></i><span> Habitaciones </span> </a>
-                    </li>
-
-                    <li class="has-submenu">
-                        <a href="{% url 'registrador_listar' %}"><i class="ti-user m-r-5"></i><span> Registrador </span> </a>
+                        <a href="{% url 'habitacion_listar' %}"><i class="mdi mdi-chart-donut-variant"></i><span> Habitaciónes </span> </a>
+                        <ul class="submenu">
+                            <li><a href="{% url 'tipo_listar' %}">Tipo habitación</a></li>
+                            
+                            
+                        </ul>
                     </li>
 
                     <li class="has-submenu">

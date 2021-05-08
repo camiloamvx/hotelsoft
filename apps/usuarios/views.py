@@ -1,10 +1,11 @@
+from typing import List
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import  UserCreationForm
 from django.views.generic import CreateView
 from django.urls import reverse_lazy
 from apps.usuarios.forms import RegistroForm
-from django.contrib.auth.views import LoginView
+from django.views.generic import ListView
 
 # Create your views here.
 
@@ -13,5 +14,9 @@ class RegistroUsuario(CreateView):
     template_name = 'usuario/registrar.html'
     form_class = RegistroForm
     success_url = reverse_lazy('cliente_listar')
+
+def index(request, *args, **kwargs):
+    return render(request, 'base/index.html', context = {}, status = 200)
+
 
 

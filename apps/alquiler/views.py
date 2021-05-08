@@ -64,6 +64,27 @@ class AlquilerDelete(DeleteView):
     template_name = 'alquiler/alquiler_delete.html'
     success_url = reverse_lazy('alquiler_listar')
 
+class EstadoList(ListView):
+    model = Estado
+    template_name = 'alquiler/estado/estado_list.html'
+
+class EstadoInsert(CreateView):
+    model = Estado
+    template_name = 'alquiler/estado/estado_form.html'
+    form_class = EstadoForm
+    success_url = reverse_lazy('estado_listar')
+
+class EstadoUpdate(UpdateView):
+    model = Estado
+    template_name = 'alquiler/estado/estado_form.html'
+    form_class = EstadoForm
+    success_url = reverse_lazy('estado_listar')
+
+class EstadoDelete(DeleteView):
+    model = Estado
+    template_name = 'alquiler/estado/estado_delete.html'
+    success_url = reverse_lazy('estado_listar')
+
 class ReporteAlquilerPdf(View):
     def cabecera(self, pdf):
         archivo_imagen = settings.MEDIA_ROOT+'\hotelsoft.png'
